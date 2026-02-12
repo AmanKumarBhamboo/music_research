@@ -1,0 +1,59 @@
+Backend Overview for Music Recognition Engine
+=============================================
+
+This document summarizes the current state of the backend code as of now.
+
+Project Structure
+-----------------
+The backend is built using FastAPI and Python.
+Root Directory: /Users/aman/Downloads/music_project_epics/backend
+
+Files:
+- main.py: Entry point for the API.
+- spectrogram.py: Logic for audio processing and spectrogram generation.
+- fingerprint.py: (Empty) Placeholder for audio fingerprinting logic.
+- matcher.py: (Empty) Placeholder for matching fingerprints against the database.
+- database.py: (Empty) Placeholder for database interactions.
+- requirements.txt: Python dependencies.
+- recordings/: Directory where uploaded audio files are saved.
+- spectrograms/: Directory where generated spectrograms are saved.
+
+Executed Code Details
+---------------------
+
+1. main.py
+   - Initializes a FastAPI application.
+   - Sets up directories for recordings.
+   - Endpoints:
+     * POST /record: Accepts an audio file upload.
+       - Generates a timestamped filename (recording_YYYYMMDD_HHMMSS.webm).
+       - Saves the file to backend/recordings/.
+       - Calls generate_spectrogram() from spectrogram.py.
+       - Returns the filename and spectrogram shape.
+     * GET /recordings: Lists all files in the recordings directory.
+     * GET /recordings/{filename}: Returns the actual audio file for playback/download.
+
+2. spectrogram.py
+   - Uses librosa to load audio files.
+   - Logic:
+     * generate_spectrogram(file_path):
+       - Loads audio using librosa.load().
+       - Computes a Mel spectrogram using librosa.feature.melspectrogram().
+       - parameters: n_fft=2048, hop_length=512, n_mels=128.
+       - Converts the power spectrogram to decibel units (log scale).
+       - Saves the spectrogram as a NumPy file (.npy) in backend/spectrograms/.
+       - Optionally saves a visual representation as a PNG image.
+       - Returns the spectrogram as a NumPy array.
+
+3. Dependencies (requirements.txt)
+   - fastapi, uvicorn: Web server.
+   - numpy, scipy: Numerical operations.
+   - librosa: Audio analysis.
+   - pydub: Audio manipulation (present in requirements but not yet used).
+   - python-multipart: For file uploads.
+   - requests: HTTP client.
+
+Status & Next Steps
+-------------------
+- Audio recording and spectrogram generation are implemented and working.
+- Fingerprinting (fingerprint.py), Matching (matcher.py), and Database (database.py) modules are currently empty and need to be implemented to complete the music recognition engine.

@@ -1,0 +1,8 @@
+fastapi
+uvicorn
+numpy
+scipy
+librosa
+pydub
+python-multipart
+requests
