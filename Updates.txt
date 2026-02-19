@@ -1,0 +1,13 @@
+--> Tho bhailog isko padh lo aur jitne bhi code likh raha ho usme comment kar dena cz mereko he dekhna hai code.
+
+--> Iss folder mai jo Testing hai usme bas test karte rahna hai..
+
+--> Dataset wale folder mai songs wale folder mai ek python script hai tho usko chala lena gaane upload karne ke baad.
+
+--> Aryan brother tu gaane upload karta reh aur ek apne database mai jo Song_metadata karke schema hai usme ------
+
+0 Artist , song_name , song_id  --- jo apan ko script se mili hai usko update karte rahna hai
+
+
+--> Saurabh bhai tu bas inn gaano ko fingerprint karde aur uske baad usko database mai store kar dena (Dataset wale folder mai Fingerprint karke folder bana lena aur usme daal dena)
+--> Reference ke liye Testing wale folder mai se dekh lena 
