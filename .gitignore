@@ -12,8 +12,8 @@ dist
 dist-ssr
 *.local
 #Virtual env
-.env
-epics
+.env/
+epics/
 # Editor directories and files
 .vscode/*
 !.vscode/extensions.json
