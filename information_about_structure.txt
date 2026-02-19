@@ -1,0 +1,5 @@
+--> Currently we have the project structure so the data in testing is to be deleted later as folder is ony for testing not anything else.
+
+--> We will operate on the dataset folder now.
+
+So who is working on dataset folder 
