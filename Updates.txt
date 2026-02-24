@@ -11,3 +11,6 @@
 
 --> Saurabh bhai tu bas inn gaano ko fingerprint karde aur uske baad usko database mai store kar dena (Dataset wale folder mai Fingerprint karke folder bana lena aur usme daal dena)
 --> Reference ke liye Testing wale folder mai se dekh lena 
+
+
+-->. Mono conversation aur downsampling dekhna hai (Testing mai nayi file baniyi hai graph pe effect dekhne ke liye..)
